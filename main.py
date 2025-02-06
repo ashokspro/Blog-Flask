@@ -7,12 +7,11 @@ from flask_login import UserMixin, LoginManager, login_user, current_user, logou
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text, ForeignKey
-from sqlalchemy.testing.suite.test_reflection import users
 from werkzeug.security import generate_password_hash, check_password_hash
-from wtforms.validators import email
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 import os
 from dotenv import load_dotenv
+
 
 load_dotenv()
 
