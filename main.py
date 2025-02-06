@@ -94,7 +94,7 @@ class Comment(Base):
     comment_author = relationship("User", back_populates="comments")
 
     parent_post = relationship("BlogPost", back_populates="comments")
-    post_id: Mapped[str] = mapped_column(String, ForeignKey("blog_posts.id"), nullable=False)
+    post_id: Mapped[int] = mapped_column(Integer, ForeignKey("blog_posts.id"), nullable=False)
 
 
 # Initialize database
